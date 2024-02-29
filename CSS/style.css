@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* COLORS */
+  --bg-color: hsl(0, 0%, 95%);
+  --main-color: hsl(0, 0%, 95%);
+
+  --trans-white: hsla(0, 0%, 100%, 0.75);
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* FONTS */
+  --lexend: "Lexend Deca", sans-serif;
+  --big-shoulder: "Big Shoulders Display", sans-serif;
+}
+
+body {
+  font-family: var(--lexend);
+  background-color: hsl(0, 0%, 95%);
+  font-size: 15px;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+main .container {
+  display: flex;
+  overflow: hidden;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  max-width: 950px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.container .card {
+  padding: 50px 50px 60px 50px;
+}
+
+.card.one {
+  background-color: var(--bright-orange);
+}
+
+.card.one > a {
+  color: var(--bright-orange);
+}
+
+.card.two {
+  background-color: var(--dark-cyan);
+}
+
+.card.two > a {
+  background-color: var(--dark-cyan);
+}
+
+.card.three {
+  background-color: var(--very-dark-cyan);
+}
+
+.card.three > a {
+  color: var(--very-dark-cyan);
+}
+
+.container .card > h1 {
+  font-size: 32px;
+  font-family: var(--big-shoulder);
+  text-transform: uppercase;
+  margin: 40px 0;
+  color: var(--main-color);
+}
+
+.container .card > p {
+  line-height: 1.8;
+  font-weight: 400;
+  margin-bottom: 80px;
+  color: var(--trans-white);
+  word-spacing: 1px;
+}
+
+.container .card > a {
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  background-color: var(--main-color);
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  border: 2px solid var(--main-color);
+}
+
+.container .card > a:hover {
+  background-color: transparent;
+  color: var(--main-color);
+}
+
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+}
